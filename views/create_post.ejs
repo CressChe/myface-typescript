@@ -3,6 +3,23 @@
 <%- include('_header') -%>
 <body>
 <h1>Create Post</h1>
+
+<form method="post" action="/posts/create">
+<label>
+    Message:
+    <input type="text" name="message" required>
+</label>
+<br>
+<br>
+<label> 
+    Image link:
+    <input type="text" name="imageUrl" required>
+</label>
+<br>
+<button type="submit">Submit</button>
+</form>
+
+
 </body>
 <%- include('_footer') -%>
 </html>

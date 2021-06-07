@@ -6,16 +6,26 @@
 <ol>
     <% results.forEach(function(user) {%>
         <li>
-            <%= user.name %>
+            <h2><%= user.name %></h2>
+            <p> 
+                Username: <%= user.username%>
+                <br>
+                <img src=<%= user.profileImageUrl %>>
+                <br> 
+                Likes: <%= user.likes.length %>
+                <br>
+                Dislikes: <%= user.dislikes.length %>                
+            </p>
         </li>
     <% }); %>
 </ol>
-<%if (next) { %>
-    <a href="<%= next %>">Next</a>
-<% } %>
 <%if (previous) { %>
     <a href="<%= previous %>">Previous</a>
 <% } %>
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+
 </body>
 <%- include('_footer') -%>
 </html>
