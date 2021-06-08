@@ -1,44 +1,46 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1>Posts</h1>
-<ol>
-    <% results.forEach(function(post) {%>
-        <li>
-            <h2><%= post.message %></h2>
-            <%= post.id %>
-            <img src= <%= post.imageUrl %>>
+    <%- include('_header') -%>
 
-            <p> 
-                Posted at: <%= post.createdAt%>
-                <br>
-                Posted by: <%= post.postedBy.username %>
-                <br> 
-                Likes: <%= post.likedBy.length %>
-                <br>
-                Dislikes: <%= post.dislikedBy.length %>                
-            </p>
-        <form method="post" action="/posts/<%= post.id %>/like/">
-            <button type="submit">Like</button>
-    
-        </form>
-        <form method="post" action="/posts/<%= post.id %>/dislike/">
-            <button type="submit">Dislike</button>
-        </form>
-        
-        </li>
-    <% }); %>
-</ol>
-<nav>
-<%if (previous) { %>
-    <a href="<%= previous %>">Previous page</a>
-<% } %>
-<%if (next) { %>
-    <a href="<%= next %>">Next page</a>
-<% } %>
+        <body>
 
-</nav>
-</body>
-<%- include('_footer') -%>
+            <ol>
+                <% results.forEach(function(post) {%>
+                    <li>
+                        <h2>
+                            <%= post.message %>
+                        </h2>
+                        <img src=<%=post.imageUrl%>>
+
+                        <p>
+                            Posted at:
+                            <%= post.createdAt%>
+                                <br> Posted by:
+                                <%= post.postedBy.username %>
+
+                        </p>
+                        <div class="reaction">
+                            <form method="post" action="/posts/<%= post.id %>/like/">
+                                <button class='like-button' type="submit">Like (<%= post.likedBy.length %>)</button>
+                                <form method="post" action="/posts/<%= post.id %>/dislike/">
+                                    <button class='dislike-button' type="submit">Dislike (<%= post.dislikedBy.length %>)</button>
+                                </form>
+                            </form>
+                        </div>
+
+                    </li>
+                    <% }); %>
+            </ol>
+            <nav>
+                <%if (previous) { %>
+                    <a href="<%= previous %>">Previous page</a>
+                    <% } %>
+                        <%if (next) { %>
+                            <a href="<%= next %>">Next page</a>
+                            <% } %>
+
+            </nav>
+        </body>
+        <%- include('_footer') -%>
+
 </html>

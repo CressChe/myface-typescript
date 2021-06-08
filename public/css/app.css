@@ -1,1 +1,110 @@
 /* Add your styles here. */
+
+nav.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #bbdefb;
+}
+
+h1 {
+    color: black;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+body {
+    background-color: #bbdefb;
+    padding-top: 35px;
+}
+
+h2 {
+    color: black;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+ol {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+li {
+    background-color: #eeffff;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    position: relative;
+}
+
+.like-button {
+    position: absolute;
+    left: 50px;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    color: white;
+    background-color: green;
+    bottom: 10px;
+}
+
+.dislike-button {
+    position: absolute;
+    right: 50px;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    color: white;
+    background-color: red;
+    bottom: 10px;
+}
+
+.like-button:hover {
+    background-color: palegreen;
+}
+
+.dislike-button:hover {
+    background-color: pink;
+}
+
+.like-button:focus {
+    background-color: yellow;
+}
+
+.dislike-button:focus {
+    background-color: yellow;
+}
+
+img {
+    width: 100%;
+    padding: 0;
+}
+
+p {
+    background-color: #8aacc8;
+    border-radius: 5px;
+    padding: 3px;
+    color: white;
+}
+
+.reaction {
+    display: inline-block;
+}
+
+@media (min-width:700px) {
+    ol {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+}
+
+@media (min-width:1250px) {
+    ol {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+}
