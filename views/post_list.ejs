@@ -13,20 +13,19 @@
                         <img src=<%=post.imageUrl%>>
 
                         <p>
-                            Posted at:
-                            <%= post.createdAt%>
+                            Posted at: <%=post.createdAt%>
                                 <br> Posted by:
                                 <%= post.postedBy.username %>
 
-                        </p>
-                        <div class="reaction">
-                            <form method="post" action="/posts/<%= post.id %>/like/">
-                                <button class='like-button' type="submit">Like (<%= post.likedBy.length %>)</button>
-                                <form method="post" action="/posts/<%= post.id %>/dislike/">
-                                    <button class='dislike-button' type="submit">Dislike (<%= post.dislikedBy.length %>)</button>
-                                </form>
-                            </form>
-                        </div>
+                                     </p>
+                                        <div class="reaction">
+                                            <form method="post" action="/posts/<%= post.id %>/like/">
+                                                <button class='like-button' type="submit">Like (<%= post.likedBy.length %>)</button>
+                                                <form method="post" action="/posts/<%= post.id %>/dislike/">
+                                                    <button class='dislike-button' type="submit">Dislike (<%= post.dislikedBy.length %>)</button>
+                                                </form>
+                                            </form>
+                                        </div>
 
                     </li>
                     <% }); %>

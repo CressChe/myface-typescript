@@ -1,43 +1,91 @@
 /* Add your styles here. */
 
-nav.header {
+/* nav.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
     background-color: #bbdefb;
+} */
+.coverImage {
+    width: 100%;
+
+}
+
+.imageAndBanner {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+
+.profileBanner {
+    background-color:#252a3880;
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    z-index: 0;
+}
+
+/* .profileImage {
+    opacity: 100%;
+} */
+
+.userPosts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr; */
+    overflow: auto;
+    height: 400px;
+}
+
+.userLikes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr; */
+    overflow: auto;
+    height: 400px;
+}
+
+.userDislikes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr; */
+    overflow: auto;
+    height: 400px;
 }
 
 h1 {
-    color: black;
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    color: white;
+    font-family: Segoe UI;
     text-align: center;
     margin: 0;
+    font-weight: normal;
 }
 
 body {
-    background-color: #bbdefb;
+    background-color: #252A38;
+    margin: 0;
     padding-top: 35px;
 }
 
 h2 {
-    color: black;
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    color:white;
+    font-family: Segoe UI;
+    font-weight: normal;
 }
 
 ol {
     list-style-type: none;
     padding-inline-start: 0px;
     display: inline-grid;
-    grid-template-columns: 1fr;
     width: 100%;
 }
 
 li {
-    background-color: #eeffff;
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    color: black;
+    background-color: #151820;
+    font-family: Segoe UI;
+    color:white;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -48,7 +96,7 @@ li {
 .like-button {
     position: absolute;
     left: 50px;
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Segoe UI;
     color: white;
     background-color: green;
     bottom: 10px;
@@ -57,7 +105,7 @@ li {
 .dislike-button {
     position: absolute;
     right: 50px;
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Segoe UI;
     color: white;
     background-color: red;
     bottom: 10px;
@@ -85,7 +133,7 @@ img {
 }
 
 p {
-    background-color: #8aacc8;
+    background-color: #151820;
     border-radius: 5px;
     padding: 3px;
     color: white;
@@ -93,6 +141,17 @@ p {
 
 .reaction {
     display: inline-block;
+}
+
+.profileImage {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 135px;
+    height: 135;
+    border: 3px solid white;
+    z-index: 2;
 }
 
 @media (min-width:700px) {
