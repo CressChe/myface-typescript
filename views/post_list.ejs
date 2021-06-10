@@ -4,9 +4,13 @@
 
         <body>
 
+            <button id='randomColorButton'>Random</button>
+            
+
+
             <ol>
                 <% results.forEach(function(post) {%>
-                    <li>
+                    <li class="listedPosts"> 
                         <h2>
                             <%= post.message %>
                         </h2>

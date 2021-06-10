@@ -1,16 +1,75 @@
 /* Add your styles here. */
+@import "burger\ menu.css";
 
-/* nav.header {
+
+/* header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60%;
+} */
+
+.alignLeft {
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin: 0px;
+    margin-left: 10px;    
+    font-size: 22;
+    font-weight: lighter;
+
+}
+
+.alignMiddle {
+    float: middle;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 22;
+    font-weight: lighter;
+}
+
+.alignRight {
+    float: right;
+    color:white;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 22;
+    font-weight: lighter;
+}
+
+nav.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
-    background-color: #bbdefb;
-} */
+    height: 40px;
+    background-color: #151820;
+    display: none;
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+nav.displayHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 30px;
+    background-color: #151820;
+    display: block;
+}
+
 .coverImage {
     width: 100%;
 
+}
+
+#randomColorButton {
+    margin-top: 60px;
 }
 
 .imageAndBanner {
@@ -26,10 +85,6 @@
     left: 120px;
     z-index: 0;
 }
-
-/* .profileImage {
-    opacity: 100%;
-} */
 
 .userPosts {
     display: grid;
@@ -76,6 +131,7 @@ h2 {
 }
 
 ol {
+    margin-top: 30px;
     list-style-type: none;
     padding-inline-start: 0px;
     display: inline-grid;
@@ -166,4 +222,38 @@ p {
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 10px;
     }
+}
+
+@media (min-width:600px) {
+    nav.header {
+        display: block;
+    }
+    .burgerMenuContainer {
+        display: none;
+    }
+}
+
+@media (max-width:599px) {
+    nav.displayHeader {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        font-family: 'Segoe UI';
+        text-align: middle;
+    }
+    .nav {
+        margin-left:20%;
+        margin-right: 70%;
+        margin-top: 30px;
+    }
+    .nav.alignLeft {
+        margin-bottom: 30%;
+    }
+
+    .nav.alignRight {
+        margin-right: 60%;
+    }
+
 }
